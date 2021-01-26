@@ -47,7 +47,7 @@ fetch('vaccination_data.json').then((res) => {
                         fillColor: `hsl(121 100% 35% / ${feature.properties.vaccinated})`,
                         weight: 2,
                         opacity: 1,
-                        color: 'white',
+                        color: 'rgba(255, 255, 255, 0.6)',
                         dashArray: '3',
                         fillOpacity: 1,
                     };
@@ -122,8 +122,8 @@ fetch('vaccination_data.json').then((res) => {
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
                 div.innerHTML +=
-                    '<i style="background:' +
-                    `hsl(121 100% 35% / ${grades[i] / 100})` +
+                    '<i style="' +
+                    `background: hsl(121 100% 35% / ${grades[i] / 100});` +
                     '"></i> ' +
                     grades[i] +
                     '%<br>';
